@@ -30,11 +30,14 @@
   "homepage": "https://github.com/yomguithereal/blessed#readme",
   "devDependencies": {
     "babel": "^5.8.3",
+    "mocha": "^2.0.1"
+  },
+  "peerDependencies": {
     "blessed": "^0.1.14",
-    "mocha": "^2.0.1",
     "react": "^0.14.0-beta1"
   },
   "dependencies": {
+    "invariant": "^2.1.0",
     "lodash": "^3.6.0"
   }
 }
