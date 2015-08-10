@@ -12,8 +12,8 @@ const RAW_ATTRIBUTES = [
   'align',
   'valign',
   'orientation',
-  'shrink',
   'padding',
+  'shrink',
   'tags',
   'shadow',
 
@@ -88,6 +88,10 @@ export default function update(node, options) {
     // Progress bar
     else if (key === 'filled' && node.filled !== value)
       node.setProgress(value);
+
+    // Padding shorthand resolves to left/top/right/bottom
+    else if (key === 'padding' && typeof value === 'number')
+      node.padding = { left: value, top: value, right: value, bottom: value };
 
     // Raw attributes
     else
